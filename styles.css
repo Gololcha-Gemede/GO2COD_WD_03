@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calc-container {
+    background-color: #1e1e1e;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f2f2f2;
+}
+
+#disp {
+    width: 100%;
+    height: 50px;
+    font-size: 1.5rem;
+    text-align: right;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    outline: none;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+#calc {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, auto);   
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:not(.opr):not(.clr):not(.eqls) {
+    background-color: #4caf50;
+    color: white;
+}
+
+button:not(.opr):not(.clr):not(.eqls):hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+
+button.opr {
+    background-color: #f39c12;
+    color: white;
+}
+
+button.opr:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
+}
+
+button.clr {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button.clr:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+button.eqls {
+    background-color: #3498db;
+    color: white;
+    grid-column: 4; 
+    grid-row:  4; 
+}
+
+button.eqls:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    #disp {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
